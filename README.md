@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/prime-8-consulting/velocity-teamcity-reporter.svg?branch=master)](https://travis-ci.org/prime-8-consulting/velocity-teamcity-reporter)
+
 Velocity TeamCity Reporter
 ====
 TeamCity reporter for Meteor's [Velocity testing framework](https://velocity.meteor.com). This reporter 

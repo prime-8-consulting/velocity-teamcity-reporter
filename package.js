@@ -17,7 +17,6 @@ Package.onUse(function(api) {
     );
 
     api.use([
-        'velocity:core@0.7.0',
         'underscore'
     ], 'server');
 

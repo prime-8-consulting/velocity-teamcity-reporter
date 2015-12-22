@@ -1,9 +1,12 @@
-# velocity:velocity-teamcity-reporter
+Velocity TeamCity Reporter
+====
+TeamCity reporter for Meteor's [Velocity testing framework](https://velocity.meteor.com). This reporter 
+will make your test results available to TeamCity.
 
-Reports test results to the Team City.
+## Installation
+Install this and at least one Velocity-compatible testing framework then add this package:
 
-## Install
+`meteor add prime8:velocity-teamcity-reporter`
 
-```bash
-meteor add prime8:velocity-teamcity-reporter
-```
+## Usage
+Relax. The plugin will detect if it is being run on a TeamCity server and output test results in TeamCity's format.

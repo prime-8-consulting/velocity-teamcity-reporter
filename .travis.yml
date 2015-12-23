@@ -1,6 +1,17 @@
-sudo: required
+# The language specific base vm to use for this repository
 language: node_js
-node_js:
-  - "0.10"
-before_install:
-  - "curl -L https://raw.githubusercontent.com/sf-wind/meteor-velocity-travis-ci/master/configure.sh | /bin/sh"
+
+# The node.js version to install
+node_js: "0.12.7"
+
+install:
+  # Install meteor
+  - "curl https://install.meteor.com | /bin/sh"
+  # Adding meteor to the $PATH
+  - "export PATH=$HOME/.meteor:$PATH"
+  # Install the velocity cli tool
+  - "npm install velocity-cli"
+
+# For testing meteor packages, that's all that is needed. 
+script:
+  - "JASMINE_CLIENT_INTEGRATION=0 velocity test-package --velocity ./"

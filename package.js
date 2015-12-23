@@ -1,5 +1,5 @@
 Package.describe({
-    name: 'prime8:velocity-teamcity-reporter',
+    name: 'prime8consulting:velocity-teamcity-reporter',
     version: '0.0.2',
     summary: 'A TeamCity reporter for Velocity',
     git: 'https://github.com/prime-8-consulting/velocity-teamcity-reporter',
@@ -8,28 +8,16 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
-    api.versionsFrom('1.1.0.2');
-
-    api.export(
-        'TeamCityReporter',
-        'server', // architecture
-        { testOnly: true} // exportOptions
-    );
-
+    api.versionsFrom('1.2.0.2');
     api.use([
         'underscore'
     ], 'server');
-
-    api.addFiles([
-        'main.js'
-    ], 'server');
+    api.addFiles('main.js', 'server');
+	api.export('TeamCityReporter');
 });
 
 Package.onTest(function(api) {
-    api.use([
-        'prime8:velocity-teamcity-reporter',
-        'sanjo:jasmine'
-    ], 'server');
-
+	api.use('sanjo:jasmine@0.20.3', 'server');
+    api.use('prime8consulting:velocity-teamcity-reporter');
     api.addFiles('tests.js', 'server');
 });

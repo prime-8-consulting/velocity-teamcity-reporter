@@ -8,7 +8,7 @@ will make your test results available to TeamCity.
 ## Installation
 Install this and at least one Velocity-compatible testing framework then add this package:
 
-`meteor add prime8:velocity-teamcity-reporter`
+`meteor add prime8consulting:velocity-teamcity-reporter`
 
 ## Usage
 Relax. The plugin will detect if it is being run on a TeamCity server and output test results in TeamCity's format.

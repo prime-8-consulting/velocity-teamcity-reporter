@@ -18,6 +18,6 @@ Package.onUse(function(api) {
 
 Package.onTest(function(api) {
 	api.use('prime8consulting:velocity-teamcity-reporter');
-	api.use('sanjo:jasmine@0.20.3', 'server');
+	api.use('sanjo:jasmine@0.20.3');
     api.addFiles('tests.js', 'server');
 });

@@ -13,11 +13,11 @@ Package.onUse(function(api) {
         'underscore'
     ], 'server');
     api.addFiles('main.js', 'server');
-	api.export('TeamCityReporter');
+	api.export('TeamCityReporter', 'server');
 });
 
 Package.onTest(function(api) {
+	api.use('prime8consulting:velocity-teamcity-reporter');
 	api.use('sanjo:jasmine@0.20.3', 'server');
-    api.use('prime8consulting:velocity-teamcity-reporter');
     api.addFiles('tests.js', 'server');
 });

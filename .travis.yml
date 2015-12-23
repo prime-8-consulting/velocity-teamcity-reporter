@@ -14,7 +14,9 @@ install:
   # Install the velocity cli tool
   - "npm install velocity-cli"
 
-# For testing meteor packages, that's all that is needed. 
+
 script:
+  # Enabling iNotify.
   - "echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p"
+  # Test package by turning off client integration mode.
   - "JASMINE_CLIENT_INTEGRATION=0 velocity test-package --velocity ./"

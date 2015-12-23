@@ -1,6 +1,6 @@
 Package.describe({
     name: 'prime8consulting:velocity-teamcity-reporter',
-    version: '0.0.2',
+    version: '0.0.3',
     summary: 'A TeamCity reporter for Velocity',
     git: 'https://github.com/prime-8-consulting/velocity-teamcity-reporter',
     documentation: 'README.md',

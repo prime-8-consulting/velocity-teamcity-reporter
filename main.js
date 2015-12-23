@@ -65,3 +65,5 @@ TeamCityReporter.startListening = function() {
     } // if
 };
 
+// start listening.
+TeamCityReporter.startListening();

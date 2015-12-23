@@ -4,6 +4,8 @@ language: node_js
 # The node.js version to install
 node_js: "0.12.7"
 
+sudo: required
+
 install:
   # Install meteor
   - "curl https://install.meteor.com | /bin/sh"
@@ -14,4 +16,5 @@ install:
 
 # For testing meteor packages, that's all that is needed. 
 script:
+  - "echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p"
   - "JASMINE_CLIENT_INTEGRATION=0 velocity test-package --velocity ./"

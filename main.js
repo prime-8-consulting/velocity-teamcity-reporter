@@ -15,14 +15,15 @@ TeamCityReporter.getMessage = function(prefix, data) {
 
     var message = '##teamcity['+ prefix;
 
-    for (var key in data) {
-        var value = data[key] +'';
+    _.each(data, function(element, index) {
+        var key = index;
+        var value = element +'';
 
         // escape single quotes.
         value = value.replace(/'/g, '\\\'');
 
         message += ' '+ key + '=\'' + value + '\'';
-    } // for
+    });
 
     message += ']';
     return message;

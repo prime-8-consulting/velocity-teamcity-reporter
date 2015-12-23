@@ -11,7 +11,7 @@ Package.onUse(function(api) {
     api.versionsFrom('1.0.4');
     api.use([
         'underscore',
-        'velocity:core'
+        'velocity:core@0.10.0'
     ], 'server');
     api.addFiles('main.js', 'server');
 	api.export('TeamCityReporter', 'server');
